@@ -135,12 +135,16 @@ const JobCard = ({ job, onEdit, onDelete, onStatusChange }: JobCardProps) => {
           className="action-buttons" 
           direction="row" 
           spacing={0.5} 
-          sx={{ opacity: 0, transition: 'opacity 0.2s' }}
+          sx={{ 
+            opacity: { xs: 1, md: 0 }, 
+            transition: 'opacity 0.2s',
+            alignItems: 'flex-start' 
+          }}
         >
-          <IconButton size="small" onClick={() => onEdit(job)}>
+          <IconButton size="small" onClick={() => onEdit(job)} sx={{ p: { xs: 0.5, sm: 1 } }}>
             <Edit size={16} color="#94a3b8" />
           </IconButton>
-          <IconButton size="small" onClick={() => onDelete(job.id)}>
+          <IconButton size="small" onClick={() => onDelete(job.id)} sx={{ p: { xs: 0.5, sm: 1 } }}>
             <Trash2 size={16} color="#94a3b8" />
           </IconButton>
         </Stack>

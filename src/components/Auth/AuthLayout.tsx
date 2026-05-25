@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography, Stack, useMediaQuery, useTheme } from '@mui/material';
-import logo from '../../assets/radar-white.png';
+import logoWhite from '../../assets/radar-white.png';
+import logoColor from '../../assets/radar.png';
 
 interface AuthLayoutProps {
   children: React.ReactNode;
@@ -83,7 +84,7 @@ const AuthLayout = ({
               <Stack direction="row" spacing={1.5} sx={{ alignItems: 'center' }}>
                 <Box
                   component="img"
-                  src={logo}
+                  src={logoWhite}
                   alt="Jobs.io Logo"
                   sx={{ width: 40, height: 40, borderRadius: 0 }}
                 />
@@ -141,6 +142,20 @@ const AuthLayout = ({
           }}
         >
           <Box sx={{ maxWidth: 400, width: '100%', mx: 'auto' }}>
+            <Box 
+              sx={{ 
+                display: { xs: 'flex', md: 'none' }, 
+                justifyContent: 'center', 
+                mb: 4 
+              }}
+            >
+              <Box
+                component="img"
+                src={logoColor}
+                alt="Jobs.io Logo"
+                sx={{ width: 64, height: 64 }}
+              />
+            </Box>
             <Box sx={{ mb: 6 }}>
               <Typography
                 variant="h4"

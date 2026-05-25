@@ -713,8 +713,10 @@ const Settings = () => {
             size="small"
             type="number"
             placeholder="50000"
-            InputProps={{
-              startAdornment: <InputAdornment position="start">$</InputAdornment>,
+            slotProps={{
+              input: {
+                startAdornment: <InputAdornment position="start">$</InputAdornment>,
+              }
             }}
             sx={{ maxWidth: 220 }}
           />
@@ -725,8 +727,10 @@ const Settings = () => {
             size="small"
             type="number"
             placeholder="120000"
-            InputProps={{
-              startAdornment: <InputAdornment position="start">$</InputAdornment>,
+            slotProps={{
+              input: {
+                startAdornment: <InputAdornment position="start">$</InputAdornment>,
+              }
             }}
             sx={{ maxWidth: 220 }}
           />
@@ -775,14 +779,16 @@ const Settings = () => {
             onChange={(e) => updateSecurity('currentPassword', e.target.value)}
             size="small"
             fullWidth
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <IconButton size="small" onClick={() => setShowCurrentPw(!showCurrentPw)} edge="end">
-                    {showCurrentPw ? <EyeOff size={18} /> : <Eye size={18} />}
-                  </IconButton>
-                </InputAdornment>
-              ),
+            slotProps={{
+              input: {
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton size="small" onClick={() => setShowCurrentPw(!showCurrentPw)} edge="end">
+                      {showCurrentPw ? <EyeOff size={18} /> : <Eye size={18} />}
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              }
             }}
           />
           <TextField
@@ -792,14 +798,16 @@ const Settings = () => {
             onChange={(e) => updateSecurity('newPassword', e.target.value)}
             size="small"
             fullWidth
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <IconButton size="small" onClick={() => setShowNewPw(!showNewPw)} edge="end">
-                    {showNewPw ? <EyeOff size={18} /> : <Eye size={18} />}
-                  </IconButton>
-                </InputAdornment>
-              ),
+            slotProps={{
+              input: {
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton size="small" onClick={() => setShowNewPw(!showNewPw)} edge="end">
+                      {showNewPw ? <EyeOff size={18} /> : <Eye size={18} />}
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              }
             }}
           />
           <TextField
@@ -1208,18 +1216,19 @@ const Settings = () => {
   };
 
   return (
-    <Box sx={{ p: 3, flexGrow: 1, maxWidth: 1200, mx: 'auto', width: '100%' }}>
+    <Box sx={{ p: { xs: 2.5, sm: 3 }, flexGrow: 1, maxWidth: 1200, mx: 'auto', width: '100%' }}>
       {/* Header */}
       <Stack
-        direction="row"
-        sx={{ justifyContent: 'space-between', alignItems: 'center', mb: 4 }}
+        direction={{ xs: 'column', sm: 'row' }}
+        spacing={2}
+        sx={{ justifyContent: 'space-between', alignItems: { xs: 'flex-start', sm: 'center' }, mb: 4 }}
       >
         <Box>
-          <Typography variant="h4" sx={{ fontWeight: 'bold', color: 'text.primary' }}>
+          <Typography variant="h4" sx={{ fontWeight: 'bold', color: 'text.primary', fontSize: { xs: '1.75rem', sm: '2.125rem' } }}>
             Settings
           </Typography>
-          <Typography variant="body1" color="text.secondary">
-            Manage your account, preferences, and platform experience.
+          <Typography variant="body1" color="text.secondary" sx={{ fontSize: { xs: '0.9rem', sm: '1rem' } }}>
+            Manage your account and preferences.
           </Typography>
         </Box>
       </Stack>
@@ -1254,16 +1263,19 @@ const Settings = () => {
               borderRadius: 3,
               borderColor: 'divider',
               display: 'flex',
+              flexDirection: { xs: 'column-reverse', sm: 'row' },
               justifyContent: 'flex-end',
               gap: 1.5,
               position: 'sticky',
               bottom: 16,
               bgcolor: 'white',
               zIndex: 5,
+              boxShadow: '0 -10px 20px rgba(0,0,0,0.02)'
             }}
           >
             <Button
               variant="outlined"
+              fullWidth={{ xs: true, sm: false } as any}
               startIcon={<X size={16} />}
               sx={{ textTransform: 'none', borderRadius: 2, px: 3 }}
               disabled={saving}
@@ -1272,6 +1284,7 @@ const Settings = () => {
             </Button>
             <Button
               variant="contained"
+              fullWidth={{ xs: true, sm: false } as any}
               startIcon={<Save size={16} />}
               onClick={saveSettings}
               disabled={saving}

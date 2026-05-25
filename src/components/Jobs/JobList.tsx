@@ -50,9 +50,17 @@ const JobList = () => {
   };
 
   return (
-    <Box sx={{ p: 3 }}>
-      <Stack direction="row" sx={{ justifyContent: 'space-between', alignItems: 'center', mb: 4 }}>
-        <Typography variant="h4" sx={{ fontWeight: 'bold', color: 'text.primary' }}>
+    <Box sx={{ p: { xs: 2, sm: 3 } }}>
+      <Stack 
+        direction={{ xs: 'column', sm: 'row' }} 
+        spacing={2}
+        sx={{ 
+          justifyContent: 'space-between', 
+          alignItems: { xs: 'flex-start', sm: 'center' }, 
+          mb: 4 
+        }}
+      >
+        <Typography variant="h4" sx={{ fontWeight: 'bold', color: 'text.primary', fontSize: { xs: '1.75rem', sm: '2.125rem' } }}>
           Job Applications
         </Typography>
         <Button
@@ -60,6 +68,7 @@ const JobList = () => {
           startIcon={<Plus size={20} />}
           onClick={() => setShowForm(true)}
           sx={{
+            width: { xs: '100%', sm: 'auto' },
             py: 1.25,
             px: 3,
             borderRadius: 2,

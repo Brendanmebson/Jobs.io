@@ -91,40 +91,77 @@ const CalendarView = () => {
   };
 
   return (
-    <Box sx={{ p: 3, height: '100%', display: 'flex', flexDirection: 'column', gap: 3, maxWidth: 1000, mx: 'auto', width: '100%' }}>
+    <Box sx={{ 
+      p: { xs: 2, sm: 3 }, 
+      height: '100%', 
+      display: 'flex', 
+      flexDirection: 'column', 
+      gap: { xs: 2, sm: 3 }, 
+      maxWidth: 1000, 
+      mx: 'auto', 
+      width: '100%' 
+    }}>
       {/* Header */}
-      <Stack direction="row" sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
+      <Stack 
+        direction={{ xs: 'column', sm: 'row' }} 
+        spacing={2} 
+        sx={{ 
+          justifyContent: 'space-between', 
+          alignItems: { xs: 'flex-start', sm: 'center' } 
+        }}
+      >
         <Box>
-          <Typography variant="h4" sx={{ fontWeight: 800, color: 'text.primary' }}>
+          <Typography variant="h4" sx={{ fontWeight: 800, color: 'text.primary', fontSize: { xs: '1.75rem', sm: '2.125rem' } }}>
             Calendar
           </Typography>
-          <Typography variant="body1" color="text.secondary">
+          <Typography variant="body2" color="text.secondary" sx={{ display: { xs: 'none', sm: 'block' } }}>
             Manage your interviews and scheduled tasks
           </Typography>
         </Box>
-        <Stack direction="row" spacing={2} sx={{ alignItems: 'center' }}>
-          <Button 
-            variant="outlined" 
-            size="small" 
-            onClick={goToToday}
-            sx={{ borderRadius: 2, textTransform: 'none', px: 2 }}
-          >
-            Today
-          </Button>
-          <Stack direction="row" sx={{ alignItems: 'center', bgcolor: 'white', borderRadius: 2, border: '1px solid', borderColor: 'divider' }}>
-            <IconButton onClick={prevMonth} size="small"><ChevronLeft size={20} /></IconButton>
-            <Typography variant="subtitle1" sx={{ fontWeight: 700, minWidth: 140, textAlign: 'center' }}>
-              {format(currentDate, 'MMMM yyyy')}
-            </Typography>
-            <IconButton onClick={nextMonth} size="small"><ChevronRight size={20} /></IconButton>
+        <Stack 
+          direction={{ xs: 'column-reverse', sm: 'row' }} 
+          spacing={2} 
+          sx={{ 
+            alignItems: { xs: 'stretch', sm: 'center' },
+            width: { xs: '100%', sm: 'auto' }
+          }}
+        >
+          <Stack direction="row" spacing={1} sx={{ width: { xs: '100%', sm: 'auto' } }}>
+            <Button 
+              variant="outlined" 
+              size="small" 
+              onClick={goToToday}
+              sx={{ borderRadius: 2, textTransform: 'none', px: 2, flex: { xs: 1, sm: 'none' } }}
+            >
+              Today
+            </Button>
+            <Stack 
+              direction="row" 
+              sx={{ 
+                alignItems: 'center', 
+                bgcolor: 'white', 
+                borderRadius: 2, 
+                border: '1px solid', 
+                borderColor: 'divider',
+                flex: { xs: 2, sm: 'none' }
+              }}
+            >
+              <IconButton onClick={prevMonth} size="small"><ChevronLeft size={20} /></IconButton>
+              <Typography variant="subtitle2" sx={{ fontWeight: 700, minWidth: { xs: 80, sm: 140 }, textAlign: 'center', fontSize: { xs: '0.8rem', sm: '0.875rem' } }}>
+                {format(currentDate, 'MMM yyyy')}
+              </Typography>
+              <IconButton onClick={nextMonth} size="small"><ChevronRight size={20} /></IconButton>
+            </Stack>
           </Stack>
           <Button 
             variant="contained" 
+            fullWidth={{ xs: true, sm: false } as any}
             startIcon={<Plus size={18} />}
             sx={{ 
               borderRadius: 2, 
               textTransform: 'none', 
               bgcolor: 'primary.main',
+              py: { xs: 1, sm: 0.5 },
               '&:hover': { bgcolor: 'primary.dark' }
             }}
             onClick={() => {
@@ -152,9 +189,10 @@ const CalendarView = () => {
         {/* Day Header */}
         <Box sx={{ display: 'flex', borderBottom: '1px solid', borderColor: 'divider', bgcolor: 'grey.50' }}>
           {dayNames.map(day => (
-            <Box key={day} sx={{ width: '14.285%', p: 1.5, textAlign: 'center' }}>
-              <Typography variant="caption" sx={{ fontWeight: 700, color: 'text.secondary', textTransform: 'uppercase', letterSpacing: 1 }}>
-                {day}
+            <Box key={day} sx={{ width: '14.285%', p: { xs: 1, sm: 1.5 }, textAlign: 'center' }}>
+              <Typography variant="caption" sx={{ fontWeight: 700, color: 'text.secondary', textTransform: 'uppercase', letterSpacing: { xs: 0, sm: 1 }, fontSize: { xs: '0.6rem', sm: '0.75rem' } }}>
+                <Box component="span" sx={{ display: { xs: 'none', sm: 'inline' } }}>{day}</Box>
+                <Box component="span" sx={{ display: { xs: 'inline', sm: 'none' } }}>{day[0]}</Box>
               </Typography>
             </Box>
           ))}
@@ -172,11 +210,11 @@ const CalendarView = () => {
                 key={day.toString()} 
                 sx={{ 
                   width: '14.285%',
-                  height: 'calc((100vh - 280px) / 6)', // Adjust based on layout
+                  height: { xs: 'calc((100vh - 250px) / 6)', sm: 'calc((100vh - 280px) / 6)' },
                   borderRight: (idx + 1) % 7 === 0 ? 'none' : '1px solid',
                   borderBottom: idx >= calendarDays.length - 7 ? 'none' : '1px solid',
                   borderColor: 'divider',
-                  p: 1,
+                  p: { xs: 0.5, sm: 1 },
                   display: 'flex',
                   flexDirection: 'column',
                   gap: 0.5,

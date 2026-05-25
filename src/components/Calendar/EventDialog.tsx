@@ -11,7 +11,9 @@ import {
   MenuItem, 
   Button, 
   Paper,
-  Chip
+  Chip,
+  useTheme,
+  useMediaQuery
 } from '@mui/material';
 import { 
   X, 
@@ -42,6 +44,8 @@ const categories: { value: CalendarEventCategory; label: string; color: string }
 ];
 
 const EventDialog = ({ open, onClose, date }: EventDialogProps) => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const { getEventsForDate, addEvent, updateEvent, deleteEvent } = useCalendar();
   const [isAdding, setIsAdding] = useState(false);
   const [editingEventId, setEditingEventId] = useState<string | null>(null);
@@ -104,8 +108,12 @@ const EventDialog = ({ open, onClose, date }: EventDialogProps) => {
       onClose={handleClose}
       maxWidth="sm"
       fullWidth
+      fullScreen={isMobile}
       sx={{
-        '& .MuiDialog-paper': { borderRadius: 3, bgcolor: '#f8fafc' }
+        '& .MuiDialog-paper': { 
+          borderRadius: isMobile ? 0 : 3, 
+          bgcolor: '#f8fafc' 
+        }
       }}
     >
       <DialogTitle sx={{ p: 3, pb: 2, bgcolor: 'white', borderBottom: '1px solid', borderColor: 'divider' }}>

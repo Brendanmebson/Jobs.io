@@ -27,9 +27,10 @@ const JobFilters = ({ filters, onFiltersChange }: JobFiltersProps) => {
       <Box 
         sx={{ 
           display: 'flex', 
-          flexDirection: { xs: 'column', lg: 'row' }, 
+          flexDirection: { xs: 'column', md: 'row' }, 
+          flexWrap: 'wrap',
           gap: 2,
-          alignItems: 'flex-end'
+          alignItems: { xs: 'stretch', md: 'flex-end' }
         }}
       >
         <Box sx={{ flex: 1, width: '100%' }}>
