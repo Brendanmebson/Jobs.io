@@ -19,6 +19,7 @@ import {
 } from '@mui/material';
 import { File, MoreVertical, Star, FileText, FileImage, LayoutTemplate, Download, ExternalLink } from 'lucide-react';
 import { Document } from '../../types/document';
+import DocumentCard from './DocumentCard';
 
 interface Props {
   documents: Document[];

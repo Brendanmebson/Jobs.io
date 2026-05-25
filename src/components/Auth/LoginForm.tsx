@@ -199,6 +199,9 @@ const LoginForm = ({ onToggleMode }: LoginFormProps) => {
             >
               Sign in with Google
             </Button>
+            <Typography variant="caption" sx={{ color: 'text.secondary', textAlign: 'center', display: 'block', fontSize: '0.7rem' }}>
+              Demo: demo@jobs.io / password123
+            </Typography>
           </Stack>
 
           <Box sx={{ textAlign: 'center', mt: 2 }}>
