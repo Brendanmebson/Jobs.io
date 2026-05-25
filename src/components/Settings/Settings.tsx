@@ -182,7 +182,7 @@ const SectionCard = ({
   <Paper
     variant="outlined"
     sx={{
-      p: { xs: 2.5, sm: 3 },
+      p: { xs: 2, sm: 3 },
       borderRadius: 3,
       borderColor: 'divider',
       mb: 3,
@@ -221,8 +221,8 @@ const ToggleRow = ({
     sx={{
       justifyContent: 'space-between',
       alignItems: 'center',
-      py: 1.5,
-      px: 1,
+      py: { xs: 1, sm: 1.5 },
+      px: { xs: 0.5, sm: 1 },
       borderRadius: 2,
       transition: 'background 0.15s',
       '&:hover': { bgcolor: 'grey.50' },
@@ -343,7 +343,7 @@ const Settings = () => {
   const renderProfile = () => (
     <>
       <SectionCard title="Profile Picture" subtitle="Upload a photo to personalize your account.">
-        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={3} sx={{ alignItems: 'center' }}>
+        <Stack direction={{ xs: 'column', sm: 'row' }} spacing={{ xs: 2, sm: 3 }} sx={{ alignItems: 'center' }}>
           <Avatar
             src={user?.avatar}
             alt={settings.profile.fullName || user?.name}

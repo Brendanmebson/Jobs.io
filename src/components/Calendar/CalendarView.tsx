@@ -126,12 +126,12 @@ const CalendarView = () => {
             width: { xs: '100%', sm: 'auto' }
           }}
         >
-          <Stack direction="row" spacing={1} sx={{ width: { xs: '100%', sm: 'auto' } }}>
+          <Stack direction="row" sx={{ width: { xs: '100%', sm: 'auto' }, justifyContent: 'space-between', alignItems: 'center' }}>
             <Button 
               variant="outlined" 
               size="small" 
               onClick={goToToday}
-              sx={{ borderRadius: 2, textTransform: 'none', px: 2, flex: { xs: 1, sm: 'none' } }}
+              sx={{ borderRadius: 2, textTransform: 'none', px: 2 }}
             >
               Today
             </Button>
@@ -142,8 +142,7 @@ const CalendarView = () => {
                 bgcolor: 'white', 
                 borderRadius: 2, 
                 border: '1px solid', 
-                borderColor: 'divider',
-                flex: { xs: 2, sm: 'none' }
+                borderColor: 'divider'
               }}
             >
               <IconButton onClick={prevMonth} size="small"><ChevronLeft size={20} /></IconButton>

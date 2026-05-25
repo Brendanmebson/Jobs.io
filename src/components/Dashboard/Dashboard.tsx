@@ -17,7 +17,7 @@ const Dashboard = () => {
     .slice(5, 10);
 
   return (
-    <Box sx={{ p: 3, flexGrow: 1 }}>
+    <Box sx={{ p: { xs: 2, sm: 3 }, flexGrow: 1 }}>
       <Stack direction="row" sx={{ justifyContent: 'space-between', alignItems: 'center', mb: 4 }}>
         <Box>
           <Typography variant="h4" sx={{ fontWeight: 'bold', color: 'text.primary' }}>

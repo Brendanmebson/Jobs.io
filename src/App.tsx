@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ThemeProvider, createTheme, CssBaseline, Box, Typography, Paper, Button } from '@mui/material';
-import { Calendar, FileText, BarChart } from 'lucide-react';
 import { useAuth } from './hooks/useAuth';
 import LoginForm from './components/Auth/LoginForm';
 import RegisterForm from './components/Auth/RegisterForm';
@@ -69,48 +68,6 @@ function App() {
     );
   }
 
-  const renderPlaceholder = (title: string, icon: React.ReactNode, message: string) => (
-    <Box sx={{ p: 3 }}>
-      <Typography variant="h4" gutterBottom sx={{ fontWeight: 'bold', mb: 3 }}>{title}</Typography>
-      <Paper 
-        variant="outlined" 
-        sx={{ 
-          p: 8, 
-          textAlign: 'center', 
-          borderRadius: 4,
-          bgcolor: 'white',
-          borderStyle: 'dashed',
-          borderColor: 'divider',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: 2
-        }}
-      >
-        <Box sx={{ 
-          p: 2, 
-          borderRadius: '50%', 
-          bgcolor: 'grey.50',
-          color: 'text.secondary',
-          display: 'flex',
-          mb: 1
-        }}>
-          {icon}
-        </Box>
-        <Typography variant="h6" sx={{ fontWeight: 'bold' }}>{title} Module</Typography>
-        <Typography color="text.secondary" sx={{ maxWidth: 400 }}>
-          {message}
-        </Typography>
-        <Button 
-          variant="contained" 
-          disabled 
-          sx={{ mt: 2, borderRadius: 2, textTransform: 'none' }}
-        >
-          Coming Soon
-        </Button>
-      </Paper>
-    </Box>
-  );
 
   const renderContent = () => {
     switch (activeView) {
@@ -134,9 +91,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden' }}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', height: '100vh', overflow: 'hidden', maxWidth: '100vw' }}>
         <Header onMenuClick={handleDrawerToggle} />
-        <Box sx={{ display: 'flex', flex: 1, overflow: 'hidden' }}>
+        <Box sx={{ display: 'flex', flex: 1, overflow: 'hidden', maxWidth: '100vw' }}>
           <Sidebar 
             activeView={activeView} 
             onViewChange={handleViewChange} 
