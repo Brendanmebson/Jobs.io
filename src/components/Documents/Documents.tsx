@@ -1,6 +1,6 @@
-import React, { useState, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { UploadCloud, FolderPlus } from 'lucide-react';
-import { Box, Typography, Button, Paper, Divider } from '@mui/material';
+import { Box, Typography, Button } from '@mui/material';
 import DocumentStatsCards from './DocumentStatsCards';
 import DocumentFilters from './DocumentFilters';
 import FolderNavigation from './FolderNavigation';

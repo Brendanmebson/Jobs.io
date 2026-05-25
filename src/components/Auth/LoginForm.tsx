@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Eye, EyeOff } from 'lucide-react';
 import { 
   Box, 
-  Typography, 
   TextField, 
   Button, 
   IconButton, 
@@ -14,6 +13,7 @@ import {
   Checkbox,
   FormControlLabel
 } from '@mui/material';
+import Typography from '@mui/material/Typography';
 import { useAuth } from '../../hooks/useAuth';
 import AuthLayout from './AuthLayout';
 
@@ -47,7 +47,7 @@ const LoginForm = ({ onToggleMode }: LoginFormProps) => {
     setError('');
 
     try {
-      const success = await login(email.trim(), password);
+      const success = await login(email.trim(), password, rememberMe);
       if (!success) {
         setError('Invalid email or password');
       }
@@ -62,7 +62,7 @@ const LoginForm = ({ onToggleMode }: LoginFormProps) => {
     setLoading(true);
     setError('');
     try {
-      const success = await login('demo@jobs.io', 'password123');
+      const success = await login('demo@jobs.io', 'password123', true); // Demo login always remembers for convenience, or false if user insists
       if (!success) setError('Demo login failed');
     } catch {
       setError('Demo login failed');

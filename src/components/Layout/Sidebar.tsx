@@ -1,6 +1,6 @@
 import React from 'react';
 import { LayoutDashboard, Briefcase, Calendar, FileText, BarChart3, Settings } from 'lucide-react';
-import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Drawer } from '@mui/material';
+import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Drawer, Typography } from '@mui/material';
 
 interface SidebarProps {
   activeView: string;

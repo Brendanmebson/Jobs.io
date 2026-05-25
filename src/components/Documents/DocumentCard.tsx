@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Box, Paper, Typography, IconButton, Menu, MenuItem, Chip, Divider, Tooltip, Button } from '@mui/material';
+import { Box, Paper, IconButton, Menu, MenuItem, Chip, Divider, Tooltip, Button } from '@mui/material';
+import Typography from '@mui/material/Typography';
 import { FileText, MoreVertical, Star, Download, Edit2, Share2, Trash2, File, FileImage, LayoutTemplate } from 'lucide-react';
 import { Document } from '../../types/document';
 

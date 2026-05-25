@@ -58,8 +58,13 @@ export default function DocumentStatsCards({ stats }: Props) {
     <Box 
       sx={{ 
         display: 'grid', 
-        gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(5, 1fr)' }, 
-        gap: 3 
+        gridTemplateColumns: { 
+          xs: '1fr', 
+          sm: 'repeat(2, 1fr)', 
+          md: 'repeat(3, 1fr)', 
+          lg: 'repeat(5, 1fr)' 
+        }, 
+        gap: { xs: 2, sm: 3 } 
       }}
     >
       {statItems.map((item, index) => (

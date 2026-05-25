@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect, ReactNode } from 'react';
 import { User, AuthState } from '../types';
 
 interface AuthContextType extends AuthState {
-  login: (email: string, password: string) => Promise<boolean>;
+  login: (email: string, password: string, rememberMe?: boolean) => Promise<boolean>;
   register: (name: string, email: string, password: string) => Promise<boolean>;
   logout: () => void;
 }
@@ -36,7 +36,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     }
   }, []);
 
-  const login = async (email: string, password: string): Promise<boolean> => {
+  const login = async (email: string, password: string, rememberMe: boolean = false): Promise<boolean> => {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     
@@ -50,8 +50,10 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       
       const token = 'demo_jwt_token_' + Date.now();
       
-      localStorage.setItem('jobsio_token', token);
-      localStorage.setItem('jobsio_user', JSON.stringify(user));
+      if (rememberMe) {
+        localStorage.setItem('jobsio_token', token);
+        localStorage.setItem('jobsio_user', JSON.stringify(user));
+      }
       
       setAuthState({
         user,

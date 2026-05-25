@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { 
   Box, 
-  Typography, 
   Button, 
   Table, 
   TableBody, 
@@ -17,6 +16,7 @@ import {
   ListItemIcon,
   ListItemText
 } from '@mui/material';
+import Typography from '@mui/material/Typography';
 import { File, MoreVertical, Star, FileText, FileImage, LayoutTemplate, Download, ExternalLink } from 'lucide-react';
 import { Document } from '../../types/document';
 import DocumentCard from './DocumentCard';
@@ -104,14 +104,14 @@ export default function DocumentsView({ documents }: Props) {
       </Box>
 
       {/* Grid View for Mobile */}
-      <Box sx={{ display: { xs: 'grid', md: 'none' }, gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)' }, gap: 2 }}>
+      <Box sx={{ display: { xs: 'grid', lg: 'none' }, gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }, gap: 2 }}>
         {documents.map((doc) => (
           <DocumentCard key={doc.id} document={doc} />
         ))}
       </Box>
 
       {/* Table View for Desktop */}
-      <TableContainer component={Paper} elevation={0} sx={{ display: { xs: 'none', md: 'block' }, border: '1px solid', borderColor: 'divider', borderRadius: 3 }}>
+      <TableContainer component={Paper} elevation={0} sx={{ display: { xs: 'none', lg: 'block' }, border: '1px solid', borderColor: 'divider', borderRadius: 3 }}>
         <Table sx={{ minWidth: 650 }}>
           <TableHead sx={{ bgcolor: 'grey.50' }}>
             <TableRow>

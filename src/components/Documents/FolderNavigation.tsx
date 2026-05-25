@@ -25,21 +25,24 @@ export default function FolderNavigation({ folders, selectedFolderId, onFolderSe
       </Box>
       <Box sx={{ 
         display: 'flex', 
-        gap: 2, 
+        gap: { xs: 1.5, sm: 2 }, 
         overflowX: 'auto', 
         pb: 1,
-        '&::-webkit-scrollbar': { height: 6 },
+        px: { xs: 0.5, sm: 0 },
+        mx: { xs: -1, sm: 0 },
+        '&::-webkit-scrollbar': { height: 4 },
         '&::-webkit-scrollbar-thumb': { bgcolor: 'grey.300', borderRadius: 3 }
       }}>
         <Button
           onClick={() => onFolderSelect(null)}
           variant={selectedFolderId === null ? "contained" : "outlined"}
           sx={{
-            py: 1.5,
-            px: 2.5,
+            py: { xs: 1, sm: 1.5 },
+            px: { xs: 2, sm: 2.5 },
             borderRadius: 3,
             textTransform: 'none',
             flexShrink: 0,
+            fontSize: { xs: '0.8rem', sm: '0.875rem' },
             borderColor: selectedFolderId === null ? 'primary.main' : 'divider',
             bgcolor: selectedFolderId === null ? 'primary.main' : 'white',
             color: selectedFolderId === null ? 'white' : 'text.primary',
@@ -58,7 +61,7 @@ export default function FolderNavigation({ folders, selectedFolderId, onFolderSe
               display: 'flex',
               alignItems: 'center',
               gap: 1.5,
-              p: '10px 16px',
+              p: { xs: '6px 12px', sm: '10px 16px' },
               borderRadius: 3,
               border: '1px solid',
               borderColor: selectedFolderId === folder.id ? 'primary.main' : 'divider',
@@ -73,12 +76,12 @@ export default function FolderNavigation({ folders, selectedFolderId, onFolderSe
             }}
           >
             <FolderIcon 
-              size={20} 
+              size={18} 
               fill={selectedFolderId === folder.id ? "#0f172a" : "none"} 
               color={selectedFolderId === folder.id ? "#0f172a" : "#64748b"} 
             />
             <Box>
-              <Typography variant="body2" sx={{ fontWeight: 'medium' }} color={selectedFolderId === folder.id ? "primary.main" : "text.primary"}>
+              <Typography variant="body2" sx={{ fontWeight: 'medium', fontSize: { xs: '0.78rem', sm: '0.875rem' } }} color={selectedFolderId === folder.id ? "primary.main" : "text.primary"}>
                 {folder.name}
               </Typography>
             </Box>
@@ -86,17 +89,17 @@ export default function FolderNavigation({ folders, selectedFolderId, onFolderSe
               sx={{ 
                 bgcolor: selectedFolderId === folder.id ? 'white' : 'grey.100', 
                 color: 'text.secondary',
-                px: 1, 
-                py: 0.25, 
+                px: 0.8, 
+                py: 0.2, 
                 borderRadius: 4, 
-                fontSize: '0.75rem',
+                fontSize: '0.68rem',
                 fontWeight: 'bold',
-                ml: 1
+                ml: 0.5
               }}
             >
               {folder.count}
             </Box>
-            <IconButton size="small" sx={{ ml: -0.5, mr: -1, opacity: 0.5, '&:hover': { opacity: 1 } }}>
+            <IconButton size="small" sx={{ ml: -0.5, mr: -1, opacity: 0.5, '&:hover': { opacity: 1 }, display: { xs: 'none', sm: 'inline-flex' } }}>
               <MoreVertical size={16} />
             </IconButton>
           </Box>
