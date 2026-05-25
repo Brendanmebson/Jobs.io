@@ -1,0 +1,117 @@
+src/App.tsx(3,10): error TS6133: 'Calendar' is declared but its value is never read.
+src/App.tsx(3,20): error TS6133: 'FileText' is declared but its value is never read.
+src/components/Calendar/CalendarView.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/Calendar/CalendarView.tsx(8,3): error TS6133: 'Grid' is declared but its value is never read.
+src/components/Calendar/CalendarView.tsx(11,3): error TS6133: 'Tooltip' is declared but its value is never read.
+src/components/Calendar/CalendarView.tsx(18,15): error TS6133: 'CalendarIcon' is declared but its value is never read.
+src/components/Calendar/CalendarView.tsx(34,3): error TS6133: 'addDays' is declared but its value is never read.
+src/components/Calendar/CalendarView.tsx(42,9): error TS6133: 'theme' is declared but its value is never read.
+src/components/Calendar/CalendarView.tsx(46,11): error TS6133: 'events' is declared but its value is never read.
+src/components/Calendar/CalendarView.tsx(173,19): error TS6133: 'isSelected' is declared but its value is never read.
+src/components/Calendar/EventDrawer.tsx(11,3): error TS6133: 'Divider' is declared but its value is never read.
+src/components/Calendar/EventDrawer.tsx(13,3): error TS6133: 'Avatar' is declared but its value is never read.
+src/components/Calendar/EventDrawer.tsx(23,3): error TS6133: 'Clock' is declared but its value is never read.
+src/components/Calendar/EventDrawer.tsx(24,3): error TS6133: 'MapPin' is declared but its value is never read.
+src/components/Dashboard/ActivityChart.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/Dashboard/Dashboard.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/Dashboard/JobGoals.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/Dashboard/JobGoals.tsx(10,19): error TS6133: 'jobs' is declared but its value is never read.
+src/components/Dashboard/JobGoals.tsx(15,9): error TS6133: 'oneWeekAgo' is declared but its value is never read.
+src/components/Dashboard/StatsCard.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/Documents/DocumentCard.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/Documents/DocumentCard.tsx(73,15): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & TypographyOwnProps & CommonProps & Omit<any, "children" | ... 9 more ... | "variantMapping">): Element | null', gave the following error.
+    Property 'component' is missing in type '{ children: string; variant: "subtitle2"; fontWeight: string; sx: { overflow: "hidden"; textOverflow: "ellipsis"; display: "-webkit-box"; WebkitLineClamp: number; WebkitBoxOrient: "vertical"; mb: number; lineHeight: number; }; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<TypographyTypeMap<{}, "span">>): Element | null', gave the following error.
+    Type '{ children: string; variant: "subtitle2"; fontWeight: string; sx: { overflow: "hidden"; textOverflow: "ellipsis"; display: "-webkit-box"; WebkitLineClamp: number; WebkitBoxOrient: "vertical"; mb: number; lineHeight: number; }; }' is not assignable to type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+      Property 'fontWeight' does not exist on type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+src/components/Documents/DocumentCard.tsx(124,9): error TS2322: Type '{ children: Element[]; anchorEl: HTMLElement | null; open: boolean; onClose: () => void; PaperProps: { sx: { minWidth: number; borderRadius: number; boxShadow: string; }; }; }' is not assignable to type 'IntrinsicAttributes & MenuProps'.
+  Property 'PaperProps' does not exist on type 'IntrinsicAttributes & MenuProps'.
+src/components/Documents/DocumentFilters.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/Documents/DocumentFilters.tsx(9,3): error TS6133: 'Chip' is declared but its value is never read.
+src/components/Documents/DocumentFilters.tsx(54,9): error TS2322: Type '{ placeholder: string; variant: "outlined"; size: "small"; value: string; onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void; sx: { ...; }; InputProps: { ...; }; }' is not assignable to type 'IntrinsicAttributes & { variant?: "outlined" | undefined; } & Omit<FilledTextFieldProps | OutlinedTextFieldProps | StandardTextFieldProps, "variant">'.
+  Property 'InputProps' does not exist on type 'IntrinsicAttributes & { variant?: "outlined" | undefined; } & Omit<FilledTextFieldProps | OutlinedTextFieldProps | StandardTextFieldProps, "variant">'.
+src/components/Documents/DocumentFilters.tsx(90,9): error TS2322: Type '{ children: Element[]; anchorEl: HTMLElement | null; open: boolean; onClose: () => void; PaperProps: { sx: { mt: number; minWidth: number; borderRadius: number; boxShadow: string; }; }; }' is not assignable to type 'IntrinsicAttributes & MenuProps'.
+  Property 'PaperProps' does not exist on type 'IntrinsicAttributes & MenuProps'.
+src/components/Documents/Documents.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/Documents/Documents.tsx(3,35): error TS6133: 'Paper' is declared but its value is never read.
+src/components/Documents/Documents.tsx(3,42): error TS6133: 'Divider' is declared but its value is never read.
+src/components/Documents/DocumentStatsCards.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/Documents/DocumentStatsCards.tsx(2,34): error TS6133: 'Grid' is declared but its value is never read.
+src/components/Documents/DocumentsView.tsx(1,1): error TS6192: All imports in import declaration are unused.
+src/components/Documents/DocumentsView.tsx(55,10): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & TypographyOwnProps & CommonProps & Omit<any, "children" | ... 9 more ... | "variantMapping">): Element | null', gave the following error.
+    Property 'component' is missing in type '{ children: string; variant: "h6"; fontWeight: string; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<TypographyTypeMap<{}, "span">>): Element | null', gave the following error.
+    Type '{ children: string; variant: "h6"; fontWeight: string; }' is not assignable to type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+      Property 'fontWeight' does not exist on type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+src/components/Documents/DocumentsView.tsx(69,10): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & TypographyOwnProps & CommonProps & Omit<any, "children" | ... 9 more ... | "variantMapping">): Element | null', gave the following error.
+    Property 'component' is missing in type '{ children: (string | number)[]; variant: "h6"; fontWeight: string; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<TypographyTypeMap<{}, "span">>): Element | null', gave the following error.
+    Type '{ children: (string | number)[]; variant: "h6"; fontWeight: string; }' is not assignable to type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+      Property 'fontWeight' does not exist on type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+src/components/Documents/DocumentsView.tsx(104,14): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & GridBaseProps & { sx?: SxProps<Theme> | undefined; } & Omit<...>): Element | null', gave the following error.
+    Property 'component' is missing in type '{ children: Element; item: true; xs: number; sm: number; md: number; lg: number; key: string; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<GridTypeMap<{}, "div">>): Element | null', gave the following error.
+    Type '{ children: Element; item: true; xs: number; sm: number; md: number; lg: number; key: string; }' is not assignable to type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme> | undefined; } & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "ref"> & { ...; }, "sx" | keyof GridBaseProps>'.
+      Property 'item' does not exist on type 'IntrinsicAttributes & GridBaseProps & { sx?: SxProps<Theme> | undefined; } & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "ref"> & { ...; }, "sx" | keyof GridBaseProps>'.
+src/components/Documents/DocumentsView.tsx(132,28): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & TypographyOwnProps & CommonProps & Omit<any, "children" | ... 9 more ... | "variantMapping">): Element | null', gave the following error.
+    Property 'component' is missing in type '{ children: string; variant: "body2"; fontWeight: string; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<TypographyTypeMap<{}, "span">>): Element | null', gave the following error.
+    Type '{ children: string; variant: "body2"; fontWeight: string; }' is not assignable to type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+      Property 'fontWeight' does not exist on type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+src/components/Documents/FolderNavigation.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/Documents/FolderNavigation.tsx(16,10): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & TypographyOwnProps & CommonProps & Omit<any, "children" | ... 9 more ... | "variantMapping">): Element | null', gave the following error.
+    Property 'component' is missing in type '{ children: string; variant: "h6"; fontWeight: string; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<TypographyTypeMap<{}, "span">>): Element | null', gave the following error.
+    Type '{ children: string; variant: "h6"; fontWeight: string; }' is not assignable to type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+      Property 'fontWeight' does not exist on type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+src/components/Documents/FolderNavigation.tsx(82,16): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & TypographyOwnProps & CommonProps & Omit<any, "children" | ... 9 more ... | "variantMapping">): Element | null', gave the following error.
+    Property 'component' is missing in type '{ children: string; variant: "body2"; fontWeight: string; color: "text.primary" | "primary.main"; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<TypographyTypeMap<{}, "span">>): Element | null', gave the following error.
+    Type '{ children: string; variant: "body2"; fontWeight: string; color: "text.primary" | "primary.main"; }' is not assignable to type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+      Property 'fontWeight' does not exist on type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+src/components/Documents/UploadZone.tsx(3,23): error TS6133: 'CheckCircle2' is declared but its value is never read.
+src/components/Documents/UploadZone.tsx(65,8): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & TypographyOwnProps & CommonProps & Omit<any, "children" | ... 9 more ... | "variantMapping">): Element | null', gave the following error.
+    Property 'component' is missing in type '{ children: string; variant: "h6"; fontWeight: string; gutterBottom: true; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<TypographyTypeMap<{}, "span">>): Element | null', gave the following error.
+    Type '{ children: string; variant: "h6"; fontWeight: string; gutterBottom: true; }' is not assignable to type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+      Property 'fontWeight' does not exist on type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+src/components/Documents/UploadZone.tsx(99,14): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & TypographyOwnProps & CommonProps & Omit<any, "children" | ... 9 more ... | "variantMapping">): Element | null', gave the following error.
+    Property 'component' is missing in type '{ children: string; variant: "h6"; mb: number; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<TypographyTypeMap<{}, "span">>): Element | null', gave the following error.
+    Type '{ children: string; variant: "h6"; mb: number; }' is not assignable to type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+      Property 'mb' does not exist on type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+src/components/Documents/UploadZone.tsx(108,14): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & TypographyOwnProps & CommonProps & Omit<any, "children" | ... 9 more ... | "variantMapping">): Element | null', gave the following error.
+    Property 'component' is missing in type '{ children: string; variant: "h6"; fontWeight: string; gutterBottom: true; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<TypographyTypeMap<{}, "span">>): Element | null', gave the following error.
+    Type '{ children: string; variant: "h6"; fontWeight: string; gutterBottom: true; }' is not assignable to type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+      Property 'fontWeight' does not exist on type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+src/components/Documents/UploadZone.tsx(114,14): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & TypographyOwnProps & CommonProps & Omit<any, "children" | ... 9 more ... | "variantMapping">): Element | null', gave the following error.
+    Property 'component' is missing in type '{ children: string; variant: "caption"; color: "text.secondary"; display: string; sx: { mt: number; }; }' but required in type '{ component: ElementType<any, keyof IntrinsicElements>; }'.
+  Overload 2 of 2, '(props: DefaultComponentProps<TypographyTypeMap<{}, "span">>): Element | null', gave the following error.
+    Type '{ children: string; variant: "caption"; color: "text.secondary"; display: string; sx: { mt: number; }; }' is not assignable to type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+      Property 'display' does not exist on type 'IntrinsicAttributes & TypographyOwnProps & CommonProps & Omit<Omit<DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>, "ref"> & { ...; }, "children" | ... 9 more ... | "variantMapping">'.
+src/components/Jobs/JobCard.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/Jobs/JobCardSkeleton.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/Jobs/JobForm.tsx(101,7): error TS2322: Type '{ children: Element[]; open: true; onClose: () => void; maxWidth: "md"; fullWidth: true; PaperProps: { sx: { borderRadius: number; p: number; }; }; }' is not assignable to type 'IntrinsicAttributes & DialogProps'.
+  Property 'PaperProps' does not exist on type 'IntrinsicAttributes & DialogProps'.
+src/components/Jobs/JobForm.tsx(266,17): error TS2322: Type '{ fullWidth: true; type: "date"; label: string; value: string; onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void; InputLabelProps: { ...; }; }' is not assignable to type 'IntrinsicAttributes & { variant?: TextFieldVariants | undefined; } & Omit<FilledTextFieldProps | OutlinedTextFieldProps | StandardTextFieldProps, "variant">'.
+  Property 'InputLabelProps' does not exist on type 'IntrinsicAttributes & { variant?: TextFieldVariants | undefined; } & Omit<FilledTextFieldProps | OutlinedTextFieldProps | StandardTextFieldProps, "variant">'.
+src/components/Jobs/JobForm.tsx(274,17): error TS2322: Type '{ fullWidth: true; type: "date"; label: string; value: string; onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void; InputLabelProps: { ...; }; }' is not assignable to type 'IntrinsicAttributes & { variant?: TextFieldVariants | undefined; } & Omit<FilledTextFieldProps | OutlinedTextFieldProps | StandardTextFieldProps, "variant">'.
+  Property 'InputLabelProps' does not exist on type 'IntrinsicAttributes & { variant?: TextFieldVariants | undefined; } & Omit<FilledTextFieldProps | OutlinedTextFieldProps | StandardTextFieldProps, "variant">'.
+src/components/Jobs/JobForm.tsx(282,17): error TS2322: Type '{ fullWidth: true; type: "date"; label: string; value: string; onChange: (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void; InputLabelProps: { ...; }; }' is not assignable to type 'IntrinsicAttributes & { variant?: TextFieldVariants | undefined; } & Omit<FilledTextFieldProps | OutlinedTextFieldProps | StandardTextFieldProps, "variant">'.
+  Property 'InputLabelProps' does not exist on type 'IntrinsicAttributes & { variant?: TextFieldVariants | undefined; } & Omit<FilledTextFieldProps | OutlinedTextFieldProps | StandardTextFieldProps, "variant">'.
+src/components/Jobs/JobList.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
+src/components/Layout/Header.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/components/Layout/Sidebar.tsx(1,1): error TS6133: 'React' is declared but its value is never read.
+src/contexts/AuthContext.tsx(1,8): error TS6133: 'React' is declared but its value is never read.
